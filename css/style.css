@@ -1,0 +1,222 @@
+*, ::before, ::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --pink: rgb(255, 0, 136);
+    --blue: rgb(0, 98, 255);
+}
+
+.sec1 {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(#1c1c1c, #323232);
+    display: flex;
+}
+.sec1 .bulle {
+    z-index: 2;
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.3fr 0.4fr 1.3fr; 
+    grid-template-rows: 1.3fr 0.4fr 1.3fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "b1 . ."
+    ". . ."
+    ". . b2"; 
+}
+
+.sec1 .bulle .b1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    grid-area: b1;
+}
+
+.sec1 .bulle .b1 .bulle1 {
+
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    box-shadow: #1c1c1c -5px -5px 20px;
+    background: linear-gradient(135deg, var(--blue), #bed7ff);
+}
+
+.sec1 .bulle .b2 {
+    grid-area: b2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.sec1 .bulle .b2 .bulle2 {
+
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-bottom: 2vh;
+    margin-right: 2vw;
+    box-shadow: #1c1c1c 5px 5px 20px;
+    background: linear-gradient(315deg, var(--pink), #fdbeff);
+}
+
+.sec1 .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    z-index: 1;
+    min-width: 75%;
+    min-height: 75%;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 32px );
+    -webkit-backdrop-filter: blur( 32px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.sec2 {
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient(#323232, #1c1c1c);
+    display: flex;
+    position: relative;
+}
+
+.bulles_under {
+    z-index: 1;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.3fr 0.4fr 1.3fr; 
+    grid-template-rows: 1.3fr 0.4fr 1.3fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    "b1 . ."
+    ". . ."
+    ". . ."; 
+}
+
+.sec2 .bulles_under .b1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    grid-area: b1;
+}
+
+.sec2 .bulles_under .b1 .bulle_b1 {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    margin-top: 2vh;
+    margin-left: 2vw;
+    box-shadow: #1c1c1c -5px -5px 20px;
+    background: linear-gradient(135deg, var(--blue), #bed7ff);
+}
+
+.sec2 .content {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    z-index: 2;
+    min-width: 75%;
+    min-height: 75%;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 32px );
+    -webkit-backdrop-filter: blur( 32px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+
+.bulles_over {
+    z-index: 3;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1.3fr 0.4fr 1.3fr; 
+    grid-template-rows: 1.3fr 0.4fr 1.3fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+    ". . ."
+    ". . ."
+    ". . b2"; 
+}
+
+
+.sec2 .bulles_over .b2 {
+    grid-area: b2;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.sec2 .bulles_over .b2 .bulle_b2 {
+
+    min-width: 400px;
+    min-height: 400px;
+    border-radius: 50%;
+    margin-bottom: 2vh;
+    margin-right: 2vw;
+    box-shadow: #1c1c1c 5px 5px 20px;
+    background: linear-gradient(315deg, var(--pink), #fdbeff);
+}
+
+.sec3 {
+    height: 100vh;
+    width: 100%;
+    background: linear-gradient(#1c1c1c, #323232);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec3 .content {
+    position: relative;
+    border-radius: 20px;
+    z-index: 2;
+    width: 75%;
+    height: 75%;
+    background: rgba( 255, 255, 255, 0.25 );
+    backdrop-filter: blur( 32px );
+    -webkit-backdrop-filter: blur( 32px );
+    border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.sec3 .content::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    box-shadow: #1c1c1c -5px -5px 20px;
+    background: linear-gradient(135deg, var(--blue), #bed7ff);
+}
